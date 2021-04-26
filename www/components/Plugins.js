@@ -21,11 +21,23 @@ $(document).on('click','#beep',function(){
 $(document).on('click','#vibrar',function(){
   navigator.vibrate(2000);
 });
+
+function mostraMapa(lat, long){
+  L.mapquest.key = 'vWl7wnWveuqIZUXzHoQy2wh9BqBBqLwt';
+
+        var map = L.mapquest.map('map', {
+          center: [lat, long],
+          layers: L.mapquest.tileLayer('map'),
+          zoom: 15
+        });
+
+        map.addControl(L.mapquest.control());
+};
+
 $(document).on('click','#local',function(){
   
     var onSuccess = function(position) {
-        navigator.notification.alert('Latitude: '          + position.coords.latitude          + '\n' +
-              'Longitude: '         + position.coords.longitude         + '\n');
+      mostraMapa(position.coords.latitude, position.coords.longitude);
     };
     function onError(error) {
         navigator.notification.alert('code: '    + error.code    + '\n' +
