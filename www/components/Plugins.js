@@ -28,8 +28,14 @@ function mostraMapa(lat, long){
         var map = L.mapquest.map('map', {
           center: [lat, long],
           layers: L.mapquest.tileLayer('map'),
-          zoom: 15
+          zoom: 15          
         });
+
+        L.marker([lat, long], {
+          icon: L.mapquest.icons.marker({ secondaryColor: '#FFFFFF', primaryColor: '#FF0000', size: 'sm'}),
+          draggable: false
+          
+        }).addTo(map);
 
         map.addControl(L.mapquest.control());
 };
