@@ -7,7 +7,8 @@
         "monaca-plugin-monaca-core": "3.3.1",
         "cordova-plugin-dialogs": "2.0.2",
         "cordova-plugin-vibration": "3.1.1",
-        "cordova-plugin-geolocation": "4.0.2"
+        "cordova-plugin-geolocation": "4.0.2",
+        "cordova-plugin-camera": "5.0.1"
     },
     "cordova": {
         "plugins": {
@@ -16,7 +17,8 @@
             "monaca-plugin-monaca-core": {},
             "cordova-plugin-dialogs": {},
             "cordova-plugin-vibration": {},
-            "cordova-plugin-geolocation": {}
+            "cordova-plugin-geolocation": {},
+            "cordova-plugin-camera": {}
         }
     },
     "scripts": {
