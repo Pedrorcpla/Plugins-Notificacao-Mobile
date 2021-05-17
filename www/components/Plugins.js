@@ -43,7 +43,10 @@ function mostraMapa(lat, long){
 $(document).on('click','#local',function(){
   
     var onSuccess = function(position) {
+      $('.map').css('height', '300px');
+      $('.mapa').css('opacity', '1');
       mostraMapa(position.coords.latitude, position.coords.longitude);
+      
     };
     function onError(error) {
         navigator.notification.alert('code: '    + error.code    + '\n' +
@@ -63,6 +66,7 @@ $(document).on('click','#camera',function(){
     function onSuccess(imageURI) {
         var image = document.getElementById('imagem');
         image.src = imageURI;
+        $("img").css("height", "60vh");
     }
 
     function onFail(message) {
