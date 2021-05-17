@@ -99,3 +99,22 @@ $(document).on('click','#codigo',function(){
       }
     );
 });
+function testarConexao() {
+    var networkState = navigator.connection.type;
+
+    var states = {};
+    states[Connection.UNKNOWN]  = 'Conexão desconhecida';
+    states[Connection.ETHERNET] = 'Conexão Ethernet';
+    states[Connection.WIFI]     = 'Conexão WiFi';
+    states[Connection.CELL_2G]  = 'Conexão Cell 2G';
+    states[Connection.CELL_3G]  = 'Conexão Cell 3G';
+    states[Connection.CELL_4G]  = 'Conexão Cell 4G';
+    states[Connection.CELL]     = 'Conexão Cell genérica';
+    states[Connection.NONE]     = 'Sem conexão';
+
+    alert('Tipo de Conexão: ' + states[networkState]);
+}
+
+$(document).on('click','#conexao',function(){
+    testarConexao();
+});
