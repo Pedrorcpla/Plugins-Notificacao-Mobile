@@ -1,7 +1,10 @@
 button{
   margin-top: 10px;
 }
-
+img{
+  margin-top: 10px;
+  height: 60vh;
+}
 .map{
   margin-top: 3%;
   width: 100%;
